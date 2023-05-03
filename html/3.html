@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="../css/styles-intructions.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <title>Ejercicio 3</title>
+  </head>
+  <body>
+    <header>Ejercicio 3</header>
+    <section>
+      <p>
+        Dada una matriz en la que cada elemento númerico representa una medida,
+        crea una función increasedMeasurements que retorne el número de días en
+        los que ha existido un incremento respecto del día anterior. <br />
+        Ejemplo: en el caso de [1, 5, 3, 5] existen 2 incremetos ( el día 2
+        respecto al dia 1 y el dia 4 respecto al día 3 )
+      </p>
+      <p>
+        const increasedMeasurements = (measurements) => {<br>
+          &nbsp;&nbsp;let increments = 0;<br>
+          &nbsp;&nbsp;for (let i = 1; i < measurements.length; i++) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;if (measurements[i] > measurements[i - 1]) {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;increments++;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;}<br>
+              &nbsp;&nbsp;return increments;<br>
+        };<br>
+      </p>
+      <p>
+        <span><b>Instrucciones para el Test:</b></span>
+        <span>1.- Abrir el inspector en modo consola (ctrl + Shift + i)</span>
+        <span
+          >2.- Ejecutar la función increasedMeasurements(measurements);</span
+        >
+      </p>
+      <p>
+        <b>Test: </b>const measurements = [
+        245, 248, 259, 190, 180, 185, 191, 185, 188, 189, 204, 213, 215, 227, 222,
+        221, 236, 235, 236, 232, 224, 221, 228, 234, 226, 227, 228, 230, 232, 234,
+      ];<br>
+      increasedMeasurements(measurements);
+      </p>
+    </section>
+    <div>
+      <a href="/index.html">Menú Principal</a>
+    </div>
+    <script src="../js/3.js"></script>
+  </body>
+</html>

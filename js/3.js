@@ -3,7 +3,15 @@
 // crea una función increasedMeasurements que retorne el número de días en los que ha existido un incremento respecto del día anterior.
 // Ejemplo: en el caso de [1, 5, 3, 5] existen 2 incremetos ( el día 2 respecto al dia 1 y el dia 4 respecto al día 3 )
 
-function increasedMeasurements(measurements) {}
+const increasedMeasurements = (measurements) => {
+  let increments = 0;
+  for (let i = 1; i < measurements.length; i++) {
+    if (measurements[i] > measurements[i - 1]) {
+      increments++;
+    }
+  }
+  return increments;
+};
 
 /**
  * TEST Ejercicio 1
