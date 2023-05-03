@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="../css/styles-intructions.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+    <header>Ejercicio 1</header>
+    <section>
+      <p>
+        Dada una matriz de N elementos en la que todos los elementos son iguales
+        excepto uno, crea una función findUniq que retorne el elemento único.
+      </p>
+      <p>
+        const findUniq = (arr) => arr.filter((val) => arr.indexOf(val) ===
+        arr.lastIndexOf(val))[0];
+      </p>
+      <p>
+        <span><b>Instrucciones para el Test:</b></span>
+        <span>1.- Abrir el inspector en modo consola (ctrl + Shift + i)</span>
+        <span>2.- Pegar el primer test, este arrojará 1 como resultado</span>
+        <span
+          >3.- Pegar segundo test, este arrojará "Wonder Woman" como
+          resultado</span
+        >
+      </p>
+      <p>
+        <b>Primer Test: </b>findUniq(["12", 10, "12", 11, 1, 11, 10, "12"]);
+        <br />
+        <b>Segundo Test: </b>findUniq([ "Capitán América", "Hulk", "Deadpool",
+        "Capitán América", "Hulk", "Wonder Woman", "Deadpool", "Iron Man", "Iron
+        Man", ]);
+      </p>
+    </section>
+    <div>
+      <a href="/index.html">Menú Principal</a>
+    </div>
+    <script src="../js/1.js"></script>
+  </body>
+</html>

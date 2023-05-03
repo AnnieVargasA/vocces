@@ -2,7 +2,8 @@
 // Dada una matriz de N elementos en la que todos los elementos son iguales excepto uno,
 // crea una función findUniq que retorne el elemento único.
 
-function findUniq(array) {}
+const findUniq = (arr) =>
+  arr.filter((val) => arr.indexOf(val) === arr.lastIndexOf(val))[0];
 
 /**
  * TEST Ejercicio 1
