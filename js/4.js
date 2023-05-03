@@ -13,8 +13,8 @@ const showText = (function () {
 })();
 
 // --------------- Solo puedes tocar desde aquí ------------- //
+const showText2 = Object.assign({}, showText);
 showText.text = "Hola";
-showText2 = showText;
 showText2.text = "Adiós";
 // --------------- hasta aquí ------------------------------- //
 

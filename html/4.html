@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="../css/styles-intructions.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <title>Ejercicio 4</title>
+  </head>
+  <body>
+    <header>Ejercicio 4</header>
+    <section>
+      <p>
+        Dado el siguiente trozo de código queremos que imprima primero 'Hola' y
+        luego 'Adiós' pero no queremos alterar la función principal. Por algún
+        motivo este código no funciona como se espera y está imprimiendo en
+        consola dos veces 'Adiós'. Podriamos corregir esto de alguna manera
+        modificando sólo el código entre las líneas 15 y 19
+      </p>
+      <p>
+        const showText = (function () {<br>
+          &nbsp;&nbsp;return {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;text: "Adiós",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;init: function () {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return console.log(this.text);<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+              &nbsp;&nbsp;};<br>
+        })();
+        <br>
+        // --------------- Solo puedes tocar desde aquí ------------- // <br>
+        const showText2 = Object.assign({}, showText);<br>
+        showText.text = "Hola";<br>
+        showText2.text = "Adiós";<br>
+        // --------------- hasta aquí ------------------------------- //<br>
+      </p>
+      <p>
+        <span><b>Instrucciones para el Test:</b></span>
+        <span>1.- Abrir el inspector en modo consola (ctrl + Shift + i)</span>
+        <span
+          >2.- Ejecutar la función showText.init();</span
+        >
+        <span
+          >3.- Ejecutar la función showText2.init();</span
+        >
+      </p>
+      
+    </section>
+    <div>
+      <a href="/index.html">Menú Principal</a>
+    </div>
+
+    <script src="../js/4.js"></script>
+  </body>
+</html>
